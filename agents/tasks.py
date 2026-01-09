@@ -18,8 +18,8 @@ resort_status_task = Task(
     3. Extract all information from the scraped HTML content
     
     notes:
-    - "lifts open: 3/7" indicates that total_lifts=7 and open_lifts=3.
-    - The same goes for runs: "Runs open: 5/26" indicates total_runs=26 and open_runs=5.
+    - "lifts open: 3/7" indicates open_lifts=3.
+    - The same goes for runs: "Runs open: 5/26" indicates open_runs=5.
     - Do not confuse recent snowfall values with the snow forecast. The snow forecast is under forecasted snow. 
     Consider what day of the week it is today if you have to. The first value in the forecasted snow is today followed
     by upcoming days.
@@ -66,9 +66,9 @@ daily_update_task = Task(
     <resort_name>: <status> (if status is closed, say what time it opens today. If you don't know, just say "closed")
     - ◻️ Base Depth: <base_depth> inches
     - 🏔️ Summit Depth: <summit_depth> inches
-    - 🚡 Lifts Open: <lifts_open> / <lifts_total>
-    - 🎿 Runs Open: <runs_open> / <runs_total>
-    - 🌨️ Snowfall Forecast: give a verbal summary of how much snow is expected to fall over the next 7 days. Keep it brief, one sentence max.
+    - 🚡 Lifts Open: <lifts_open>
+    - 🎿 Runs Open: <runs_open>
+    - 🌨️ Snowfall Forecast: brief summary of the snowfall forecast for the next 7 days. Max 5 words.
     Full Info: <source_url>
 
     repeat for all resorts in {resorts}...
